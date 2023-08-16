@@ -1,14 +1,10 @@
-import numpy as np
+# np.ndarray를 받는 Variable class 작성
 
 
-class Variable:
-    def __init__(self, data):
-        self.data = data
 
-
-data = np.array(1.0)
-x = Variable(data)
-print(x.data)
-
-x.data = np.array(2.0)
-print(x.data)
+# data = np.array(1.0)
+# x = Variable(data)
+# print(x.data)
+#
+# x.data = np.array(2.0)
+# print(x.data)
