@@ -196,10 +196,13 @@ def sub(x0, x1):
     return Sub()(x0, x1)
 
 
-def rsub(x0, x1):
-    x1 = as_array(x1)
-    return sub(x1, x0)
+# def rsub(x0, x1):
+#     x1 = as_array(x1)
+#     return sub(x1, x0)
 
+def rsub(x1, x0):
+    x0 = as_array(x0) # 호출됐다는 의미는 x1이 Variable의 인스턴스임
+    return Sub()(x0, x1) # x0와 x1의 순서를 바꿈
 
 class Div(Function):
     def forward(self, x0, x1):
